@@ -6,6 +6,59 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Esto es la reserva</h1>
+    <h1>Haga su reserva</h1>
+    <form action="procesareserva.php" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" maxlength="100" required autofocus>
+        </p>     
+        <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="nombre" id="apellidos" maxlength="100" required>
+        </p>
+        <p>
+            <label for="dni">DNI:</label>
+            <input type="text" name="nombre" id="dni" maxlength="10" placeholder="DNI con letra" required>
+        </p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de su estancia</legend>
+        <p> Habitación: <br>
+            <label for="indiv">Individual</label>
+            <input type="radio" name="habitacion" id="indiv">
+            <label for="doble">Doble</label>
+            <input type="radio" name="habitacion" id="doble">
+            <label for="triple">Triple</label>
+            <input type="radio" name="habitacion" id="triple">
+        </p>
+        <p>
+            <label for="huespe">Nº de huéspedes:</label> 
+
+            <select name="huespe" id="huespe">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </p>
+        <p>
+            <label for="mascota">Mascotas:</label>
+            <input type="checkbox" name="mascota" id="mascota">
+        </p>
+        <p>
+            <label for="llegada">Fecha de Llegada:</label>
+            <input type="date" name="llegada" id="llegada">
+        </p>
+        <p>
+            <label for="hora">Hora de Llegada:</label>
+            <input type="time" name="hora" id="hora">
+        </p>
+
+        </fieldset>
+        <input type="submit">
+        <input type="reset" value="Reiniciar Cuestionario">
+    </form>
+    <p>Volver a <a href="index.html">Inicio</a></p>
 </body>
 </html>
